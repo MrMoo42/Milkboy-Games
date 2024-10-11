@@ -18,32 +18,32 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput.Normalize(); //This is so diagonal movement isnt faster.
 
-        //Check  for movement and apply the proper animations.
-        if (moveInput.x != 0)
-        {
-            ClearWalkCycle();
-            anim.SetBool("IsSide", true); //Left/Right
-        }
-        else if (moveInput.y > 0)
-        {
-            ClearWalkCycle();
-            anim.SetBool("IsDown", true); //Down
-        }
-        else if (moveInput.y < 0)
-        {
-            ClearWalkCycle();
-            anim.SetBool("IsUp", true); //Up
-        }
-        else if (moveInput == new Vector2(0,0))
-        {
-            ClearWalkCycle();
-            anim.SetBool("IsIdle", true); //Idle
-        }
+        ////Check  for movement and apply the proper animations.
+        //if (moveInput.x != 0)
+        //{
+        //    ClearWalkCycle();
+        //    anim.SetBool("IsSide", true); //Left/Right
+        //}
+        //else if (moveInput.y > 0)
+        //{
+        //    ClearWalkCycle();
+        //    anim.SetBool("IsDown", true); //Down
+        //}
+        //else if (moveInput.y < 0)
+        //{
+        //    ClearWalkCycle();
+        //    anim.SetBool("IsUp", true); //Up
+        //}
+        //else if (moveInput == new Vector2(0,0))
+        //{
+        //    ClearWalkCycle();
+        //    anim.SetBool("IsIdle", true); //Idle
+        //}
 
-        if (moveInput.x < 0) {
-            renderer.flipX = true; //Left
-        } else if (moveInput.x > 0)
-            renderer.flipX = false; //Right
+        //if (moveInput.x < 0) {
+        //    renderer.flipX = true; //Left
+        //} else if (moveInput.x > 0)
+        //    renderer.flipX = false; //Right
     } 
 
     private void FixedUpdate()

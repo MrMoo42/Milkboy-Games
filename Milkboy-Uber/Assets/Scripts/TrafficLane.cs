@@ -16,7 +16,7 @@ public class TrafficLane : MonoBehaviour
 
     IEnumerator Car() {
         isSpawning = true;
-        yield return new WaitForSeconds(Random.Range(2,6));
+        yield return new WaitForSeconds(Random.Range(2.0f,6.0f));
         GameObject temp = Instantiate(car, this.transform);
         temp.GetComponent<Vroom>().isRight = !isRight; //Reversed because I'm an idiot and too lazy to change it.
         isSpawning = false;

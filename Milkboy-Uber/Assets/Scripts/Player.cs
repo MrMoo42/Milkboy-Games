@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     }
 
     private void Update() {
-        //moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize(); //This makes it so that using more keys won't make movement faster.
     }
